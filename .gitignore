@@ -1,0 +1,17 @@
+# Credentials (never commit or package)
+.env
+*.key
+
+# Virtual environments / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Raw Inspect logs (logs/) and exports (results/) ARE kept: they are the evidence needed to
+# verify every reported number. Only offline mock-model output and build artefacts are ignored.
+results/mock/
+results/hard/mock/
+results/holdout/mock/
+dist/

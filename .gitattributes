@@ -1,0 +1,5 @@
+# Keep evidence byte-exact on every platform: dataset and freeze files are verified by sha256
+# (tests fail if line endings change), and Inspect .eval logs are compressed archives.
+*.json  -text
+*.eval  binary
+*.csv   -text

@@ -1,0 +1,13 @@
+# Core (versions verified in this project's environment)
+inspect-ai==0.3.280
+# inspect-ai 0.3.280 declares agent-client-protocol>=0.12.0 with no upper bound;
+# 1.0.0 removed acp.helpers and breaks `inspect eval`. Pin until fixed upstream.
+agent-client-protocol==0.12.1
+python-dotenv==1.2.4
+pytest==9.2.0
+
+# Model provider SDK: install ONLY the one you use (Inspect AI loads it on demand).
+# OpenAI models     (--model openai/...):     pip install openai   (tested: openai==3.51.0)
+# Anthropic models  (--model anthropic/...):  pip install "anthropic==1.17.0"
+#   anthropic 2.x is NOT compatible with inspect-ai 0.3.280 (TypeError: Cannot instantiate typing.Union).
+# Google Gemini     (--model google/...):     pip install google-genai   (tested: google-genai==2.33.0)

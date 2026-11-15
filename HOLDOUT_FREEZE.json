@@ -1,0 +1,31 @@
+{
+  "frozen_at_utc": "2026-11-15T17:05:01+00:00",
+  "dataset_file": "atlas_tests_holdout.json",
+  "dataset_sha256": "48626146d94f978588a56f3b700389364e9b6b8725ddaf1127b850c7d66469ed",
+  "n_cases": 24,
+  "n_attacks": 18,
+  "n_controls": 6,
+  "scoring_version": "1.4",
+  "scoring_py_sha256": "f34ea4026e07cf988ea94c331f8419a013e9edb671ca2e6cf733112cbb0d8103",
+  "criteria_source": "logged (no criteria changes allowed after freezing)",
+  "mitigation_prompt_sha256": "e9b1b32a28d2766d9512bc3a57fc8bc835371079ac26e19ba960b050d711dc32",
+  "base_system_prompt_sha256": "7048d120ea5ad52a62eb95e5387add0b6aeec4d3a1e968b342d6c51f87dbed71",
+  "guard_policy_sha256": "6366521d6c2b424c5db5679a22fa3d7cb57a3fab425a7659bd4f0f1c8359458e",
+  "models_and_settings": "same 12 models, hosts (model_routes.json), temperatures and max_tokens as the harder set; gpt-4o-mini via openrouter/openai/gpt-4o-mini",
+  "guards": [
+    "safeguard (gpt-oss-safeguard-20b + INJECTION_POLICY)"
+  ],
+  "rules": [
+    "No case, criterion, scoring rule, prompt or guard policy is changed after this file is written.",
+    "Rate-limited (errored) samples may be retried with identical settings; nothing else is rerun.",
+    "Truncated samples stay inconclusive; no reruns with a larger max_tokens on the holdout set.",
+    "All results are reported, whatever they show."
+  ],
+  "analysis_plan": [
+    "Per model: baseline and mitigated attack success (succeeded / 18), inconclusive counts, task completion.",
+    "Per model: paired fixed/new counts with exact two-sided McNemar p (reported as exploratory).",
+    "Compare with each model's main-set and harder-set rates (descriptive only).",
+    "Guard: detection on 18 attacks, false positives on 6 controls; residual successes if flagged documents are blocked."
+  ],
+  "authorship_note": "Cases written by the same author as the earlier sets and the scorer, after seeing earlier results, but not tested against any model, the mitigation or the guard before freezing."
+}

@@ -1,0 +1,42 @@
+{
+  "_comment": "Inspect model_args applied automatically per model (override with --model-args). OpenRouter models are pinned to one non-PRC host at fp8 or higher precision, with fallbacks disabled, so every sample is served by the same deployment. Hosts and precision checked against OpenRouter's public endpoint list on 2026-11-15.",
+  "openrouter/deepseek/deepseek-v4.1-flash": {
+    "provider": {"only": ["deepinfra/fp8"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/qwen/qwen3.8-27b": {
+    "provider": {"only": ["deepinfra/bf16"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/z-ai/glm-5.3-flash": {
+    "provider": {"only": ["baseten/fp8"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/moonshotai/kimi-k3": {
+    "provider": {"only": ["baseten/fp8"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/google/gemini-3.8-flash": {
+    "provider": {"only": ["google-ai-studio"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/nvidia/nemotron-3.5-super-vl": {
+    "provider": {"only": ["crusoe/bf16"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/cohere/command-a-plus": {
+    "provider": {"only": ["cohere/fp8"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/openai/gpt-6-luna": {
+    "provider": {"only": ["openai"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/mistralai/mistral-small-2603": {
+    "provider": {"only": ["mistral/eu"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/openai/gpt-oss-120b": {
+    "provider": {"only": ["deepinfra/bf16"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/openai/gpt-4o-mini": {
+    "provider": {"only": ["openai"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/openai/gpt-oss-safeguard-20b": {
+    "provider": {"only": ["groq"], "allow_fallbacks": false, "require_parameters": true}
+  },
+  "openrouter/meta-llama/llama-guard-4-12b": {
+    "provider": {"only": ["deepinfra/bf16"], "allow_fallbacks": false, "require_parameters": true}
+  }
+}
