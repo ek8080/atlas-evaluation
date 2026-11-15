@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "dist" / "atlas_evaluation_release.zip"
 
 INCLUDE_FILES = [
-    "README.md", "report.md", "SUMMARY.md", "requirements.txt", ".env.example", ".gitignore",
+    "README.md", "report.md", "SUMMARY.md", "requirements.txt", ".env.example", ".gitignore", ".gitattributes",
     "atlas_eval.py", "scoring.py", "export_results.py", "guardrail_eval.py", "make_release.py",
     "redact_logs.py", "LICENSE", "LICENSE-DATA.md",
     "atlas_tests.json", "atlas_tests_hard.json", "atlas_tests_holdout.json", "HOLDOUT_FREEZE.json",
